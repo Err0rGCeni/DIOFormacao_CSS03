@@ -1,0 +1,433 @@
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: black;
+    border: 5px dashed yellow;
+    gap: 5px;
+}
+
+#first {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid cyan;
+    transition: background-color cubic-bezier(.24, -0.25, .75, 1.25) 1s, transform linear 1s;
+}
+
+#first:hover {
+    background-color: crimson;
+    transform: rotate(360deg);
+}
+
+#second {
+    padding: 20px 0px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, white, black);
+}
+
+#second div {
+    width: 100px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid yellow;
+}
+
+.linear {
+    transition: width linear 1s, background linear 1s;
+}
+
+.ease {
+    transition: width ease 1s, background ease 1s;
+}
+
+.ease-in {
+    transition: width ease-in 1s, background ease-in 1s;
+}
+
+.ease-in-out {
+    transition: width ease-in-out 1s, background ease-in-out 1s;
+}
+
+.ease-out {
+    transition: width ease-out 1s, background ease-out 1s;
+}
+
+
+#second:active div {
+    width: 300px;
+    background-color: yellow;
+}
+
+#third {
+    margin: 10px;
+    width: 200px;
+    color: blue;
+    background-color: gray;
+}
+
+#third ul {
+    transition: list-style linear 1s;
+}
+
+#third ul li {
+    transition: text-decoration ease-in-out 1s, background-color ease 2s;
+    ;
+}
+
+#third ul li:has(input:checked) {
+    list-style-type: square;
+}
+
+#third li:has(input:checked) {
+    text-decoration: line-through;
+    background-color: cornflowerblue;
+}
+
+#fourth {
+    margin: 10px;
+    height: 90%;
+    width: 100%;
+}
+
+#fourth .to-hover {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: red;
+}
+
+#fourth .letters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+#fourth p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+@keyframes keyf01 {
+    from {
+        color: blue;
+        font-size: 32px;
+        font-family: cursive;
+
+    }
+
+    to {
+        color: black;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+@keyframes keyf02 {
+    0% {
+        background-color: white;
+    }
+
+    25% {
+        background-color: black;
+        transform: rotate(180deg);
+    }
+
+    50% {
+        color: teal;
+        transform: rotate(360deg);
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes keyf03 {
+    0% {
+        background-color: white;
+        border: 2px dashed violet;
+    }
+
+    50% {
+        color: blueviolet;
+        border: 5px solid red;
+    }
+
+    100% {
+        background-color: white;
+        border: 2px dashed violet;
+    }
+}
+
+#fourth:has(.to-hover:hover) .kf01 {
+    animation-name: keyf01;
+    animation-duration: 3s;
+}
+
+#fourth:has(.to-hover:hover) .kf02 {
+    animation: keyf02 2s ease 1s infinite;
+}
+
+#fourth:has(.to-hover:hover) .kf03 {
+    animation-name: keyf03;
+    animation-duration: 3s;
+}
+
+@keyframes ex01 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-20deg);
+    }
+
+    40% {
+        transform: rotate(20deg);
+    }
+
+    60% {
+        transform: rotate(-20deg);
+    }
+
+    80% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+#fifth button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #d53369, #daae51);
+    box-shadow: 8px 12px 7px #77777777;
+    animation: ex01 1s ease infinite;
+}
+
+#fifth button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    animation-play-state: paused;
+}
+
+@keyframes ex02 {
+    to {
+        border: 5px solid #f533c9;
+        transform: scale(2.0);
+    }
+
+}
+
+#sixt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#sixth .loader {
+    display: inline-block;
+    border: 5px solid #d53369;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+#sixth .loader:nth-child(1) {
+    animation: ex02 1.5s ease-in-out 0s infinite alternate;
+}
+
+#sixth .loader:nth-child(2) {
+    animation: ex02 1.5s ease-in-out 0.5s infinite alternate;
+}
+
+#sixth .loader:nth-child(3) {
+    animation: ex02 1.5s ease-in-out 1s infinite alternate;
+}
+
+@keyframes ex03 {
+    0% {
+        filter: none;
+        transform: rotate(0deg);
+        border: 2px solid blue;
+    }
+
+    20% {
+        transform: translateY(5vh) rotate(72deg);
+
+    }
+
+    40% {
+        transform: translateY(10vh) rotate(144deg);
+
+    }
+
+    60% {
+        filter: blur(10px);
+        transform: translateY(15vh) rotate(216deg);
+
+    }
+
+    80% {
+        transform: translateY(20vh) rotate(288deg);
+
+    }
+
+    100% {
+        filter: none;
+        transform: translateY(25vh) rotate(360deg);
+        border: 2px solid red;
+    }
+}
+
+#seventh {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: cyan;
+    overflow: hidden;
+}
+
+#seventh .fake-img {
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background: black url(./imgex01.jpg) center;
+    background-size: cover;
+    animation: ex03 2s linear 0s infinite alternate;
+}
+
+@keyframes ex04 {
+    0% {
+        transform: rotateY(30deg) rotate(-25deg) translateZ(100px);
+    }
+
+    10% {
+        transform: translate(50px);
+    }
+
+    25% {
+        transform: rotateY(-60deg) translateZ(100px);
+    }
+
+    50% {
+        transform: rotateX(-50deg) translateZ(-150px) rotate(90deg);
+    }
+
+    75% {
+        transform: rotateY(60deg) translateZ(100px);
+    }
+
+    90% {
+        transform: translate(-50px);
+    }
+
+    100% {
+        transform: rotateX(20deg) translateZ(0);
+    }
+}
+
+#eighth {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 300px;
+    overflow: hidden;
+    border: 2px solid silver;
+    border-radius: 20px;
+}
+
+#eighth .lights {
+    background: linear-gradient(90deg, #39ff14 0%, #05a5f7bb 35%, #1be100 100%);
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: ex04 10s infinite alternate;
+}
+
+#eighth img {
+    height: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Trade+Winds&display=swap');
+
+@keyframes ex05a {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}
+
+#ninth {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(-45deg, cyan, black, lime);
+    background-size: 400% 400%;
+    animation: ex05a 5s ease infinite;
+}
+
+#ninth h2 {
+    font-family: 'Trade Winds', cursive;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(0deg, transparent, rgba(100, 150, 50));
+    text-shadow: 2px 5px white;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#ninth p {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarquia e Especificidade</title>
+    <link rel="stylesheet" href="style01.css">
+    <style>
+        h2 {
+            color: palegreen;
+            background-color: black;
+        }
+
+        p {
+            background-color: palegoldenrod;
+        }
+    </style>
+    
+</head>
+<body>
+    <main id="conteudo">
+        <h1>H1</h1>
+        <p class="texto">Tag p.texto</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cumque laboriosam, eos accusamus porro quibusdam facere dolores odio ducimus sequi eveniet assumenda? Cupiditate, impedit incidunt? Omnis provident ducimus eaque officia!.</p>
+        <h2 style="color: greenyellow">H2</h2>
+    </main>
+
+    <p>p tag fora de main</p>
+    <p style="background-color: rgb(165, 198, 199);">p tag com estilo inline</p>
+    <hr>
+    <h2>H2 tag</h2>
+    <ol>
+        <li>Li1</li>
+        <li>Li2</li>
+        <li>Li3</li>
+    </ol>
+
+    <p class="pzin">P da classe pzin</p>
+
+    <div>
+        <p>P dentro de div</p>
+        <p class="pzin">P da classe pzin dentro de div</p>
+    </div>
+
+    <div class="papai">
+        <p>P do pai</p>
+        <div class="filho">
+            <p>P do filho, mas com inherit</p>
+            <div class="neto">
+                <p>P do neto, mas com inherit</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

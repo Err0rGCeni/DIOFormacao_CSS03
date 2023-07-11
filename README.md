@@ -1,0 +1,57 @@
+# Refinando os Estilos CSS das Nossas Páginas
+
+- Pseudo-elementos:
+  - ::first-letter;
+  - ::first-line;
+  - ::backdrop;
+  - ::marker;
+  - ::placeholder;
+  - ::selection;
+  - ::file-selector-button;
+  - ::before & ::after;
+- Pseudo-classes:
+  - :hover;
+  - :active;
+  - :focus;
+  - :target;
+  - :enable & :disabled;
+  - :link & :visited;
+  - :place-holder-shown;
+  - :checked & :indeterminate;
+  - :valid & :invalid
+  - :in-range & :out-of-range;
+  - :required & :optional;
+  - :autofill
+  - :root;
+  - :nth-child & :nth-of-type;
+  - :first-of-type & :last-of-type;
+  - :nth-last-child & :nth-last-of-type;
+  - :only-child;
+  - :only-of-type;
+  - :empty;
+  - :is;
+  - :where;
+  - :not;
+  - :shas;
+- Transformações 2D:
+  - transform;
+  - translate;
+  - rotate, rotateX & rotateY;
+  - scale;
+  - matrix;
+- Transformações 3D:
+  - perspective;
+  - transform-origin;
+  - transform-style;
+  - backface-visibility;
+- Animações:
+  - transition;
+  - animation;
+  - @keyframes;
+- Hierarquia e Especificidade;
+- BEM (Block, Element, Modifier);
+- SMACSS (Scalable and Modular, Architecture for CSS);
+- OOCSS (Object Oriented CSS);
+- Bootstrap;
+- Projetos:
+  - [Clone HBO](https://github.com/Err0rGCeni/DIOProject_HBOMax)

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <link rel="stylesheet" href="clas-style.css">
+</head>
+
+<body>
+    <h1>Pseudo-classes #02</h1>
+    <hr>
+    <h2>:nth-child e :nth-of-type</h2>
+    <div id="nthchild-oftype">
+        <p>nth-child: 3</p>
+        <ol>
+            <li>Item 01</li>
+            <li>Item 02</li>
+            <li>Item 03</li>
+            <li>Item 04</li>
+            <li>Item 05</li>
+            <li>Item 06</li>
+            <li>Item 07</li>
+        </ol>
+        <p>nth-of-type: span 2 & span 5</p>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <span>Span tag</span>
+        <code>Code tag</code>
+        <input type="number" placeholder="Input tag">
+        <cite>Cite tag</cite>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <code>Code tag</code>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <code>Code tag</code>
+        <input type="number" placeholder="Input tag">
+        <span>Span tag</span>
+        <cite>Cite tag</cite>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <span>Span tag</span>
+        <cite>Cite tag</cite>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <code>Code tag</code>
+    </div>
+    <hr>
+    <h2>:nth-last-child e :nth-last-of-type</h2>
+    <div id="nthlastchild-oftype">
+        <p>nth-last-child: 3</p>
+        <ol>
+            <li>Item 01</li>
+            <li>Item 02</li>
+            <li>Item 03</li>
+            <li>Item 04</li>
+            <li>Item 05</li>
+            <li>Item 06</li>
+            <li>Item 07</li>
+        </ol>
+        <p>nth-last-of-type: span 2 & span 5</p>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <span>Span tag</span>
+        <code>Code tag</code>
+        <input type="number" placeholder="Input tag">
+        <cite>Cite tag</cite>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <code>Code tag</code>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <code>Code tag</code>
+        <input type="number" placeholder="Input tag">
+        <span>Span tag</span>
+        <cite>Cite tag</cite>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <span>Span tag</span>
+        <cite>Cite tag</cite>
+        <p>P tag</p>
+        <span>Span tag</span>
+        <code>Code tag</code>
+    </div>
+    <hr>
+    <h2>:only-child e :only-of-type</h2>
+    <div id="onlys">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vel ullam autem fugit totam, laudantium
+            similique in maxime numquam perferendis praesentium nesciunt. <span>Consectetur facilis iste</span> nulla
+            asperiores vitae id maiores.</p>
+        <div>
+            <p>Único P</p>
+        </div>
+        <div>
+            <p>P</p>
+            <span>Span</span>
+            <p>P</p>
+        </div>
+        <div>
+            <span>Span</span>
+        </div>
+        <div>
+            <p>Único P</p>
+        </div>
+        <div>
+            <p>P</p>
+            <span>Span</span>
+            <p>P</p>
+            <span>Span</span>
+        </div>
+    </div>
+    <hr>
+    <h2>:is, :where, :not e :has</h2>
+    <div id="final">
+        <p id="is">IS</p>
+        <p id="where">WHERE</p>
+        <p id="has">HAS</p>
+        <div>
+            <p>P Tag</p>
+            <code>Code Tag</code>
+            <span>Span Tag</span>
+            <code class="green">Code .green Tag</code>
+            <p>P Tag</p>
+            <cite>Cite Tag</cite>
+            <p>P Tag</p>
+            <span>Span Tag</span>
+            <code>Code Tag</code>
+            <code class="green">Code .green Tag</code>
+            <p>P Tag</p>
+            <cite>Cite Tag</cite>
+        </div>
+        <div>
+            <h3>:Not a Hero</h3>
+            <ul>
+                <li class="hero">Superman</li>
+                <li>Lex Luthor</li>
+                <li class="hero">Batman</li>
+                <li class="hero">Mulher Maravilha</li>
+                <li>Joker</li>
+                <li class="hero">Homem-Aranha</li>
+                <li>Cheetah</li>
+                <li>Dr. Octopus</li>
+                <li class="hero">Capitão América</li>
+                <li>Caveira Vermelha</li>
+            </ul>
+        </div>
+        <div>
+            <p>:Has <code>CODE?</code></p>
+            <p>Lorem ipsum dolor sit amet, <abbr title="consectetur adipiscing elit">CAE</abbr>.</p>
+            <p>Phasellus quis leo sed <code>lorem ultrices fringilla</code>.</p>
+            <p>Curabitur vitae nisl eu nisi <dfn>tincidunt</dfn> tincidunt.</p>
+            <p>Etiam auctor felis id eros <cite>consequat</cite>, a luctus nisi sollicitudin.</p>
+            <p>Vivamus euismod augue quis lacus <em>mollis</em>, quis ullamcorper nunc sagittis.</p>
+            <p>Praesent in semper justo, sed aliquet <kbd>urna</kbd>.</p>
+            <p>Morbi at neque vel magna <samp>fermentum</samp> faucibus.</p>
+            <p>Nulla <code>facilisi</code>. Duis sit amet sapien id arcu <strong>mattis</strong> egestas.</p>
+            <p>Nunc quis turpis ac ante <var>varius</var> bibendum.</p>
+            <p>Donec in enim ac eros blandit <acronym title="malesuada">MAD</acronym>.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

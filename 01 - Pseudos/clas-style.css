@@ -1,0 +1,287 @@
+* {
+    margin: 5px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 0.25s;
+}
+
+hr {
+    margin: 10px 0px;
+}
+
+/*hover*/
+#hover div {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
+
+#hover div:hover {
+    background-color: white;
+    color: black;
+}
+
+#hover div p {
+    color: black;
+}
+
+/*active*/
+#active div,
+#active button {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: teal;
+    color: cyan;
+    border: 1px solid black;
+}
+
+#active div:active,
+#active button:active {
+    background-color: black;
+    color: cyan;
+    border: 1px solid black;
+}
+
+#active a:active {
+    background-color: red;
+}
+
+/*focus*/
+#focus label {
+    margin: 10px;
+}
+
+#focus input:focus {
+    outline: 2px solid yellowgreen;
+    outline-offset: 3px;
+}
+
+#focus select:focus {
+    color: darkblue;
+    font-size: 1.25rem;
+    outline: 0px;
+}
+
+#focus button {
+    margin: 10px;
+    padding: 4px;
+}
+
+#focus button:focus-visible {
+    background-color: brown;
+    color: white;
+}
+
+#focus button:focus {
+    border: 2px solid blue;
+}
+
+#focus form:focus-within {
+    border: 1px solid red;
+}
+
+/*target*/
+div:target {
+    background-color: palegreen;
+}
+
+div:target::before {
+    content: "▼";
+    color: yellow;
+}
+
+div:target::after {
+    content: "▲";
+    color: yellow;
+}
+
+/*enabled & disabled*/
+#enabled-disabled button {
+    height: 100px;
+    width: 200px;
+}
+
+#enabled-disabled .change {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#enabled-disabled .change:enabled {
+    background-color: green;
+}
+
+#enabled-disabled .change:disabled {
+    background-color: red;
+}
+
+/*link & visited*/
+#link-visited a {
+    font-size: 18px;
+}
+
+#link-visited .change:link {
+    color: limegreen;
+    background-color: black;
+}
+
+#link-visited .change:visited {
+    color: orange;
+    font-family: cursive;
+}
+
+/*placeholder-shown*/
+#placeholder-shown input:placeholder-shown {
+    outline: 1px solid yellow;
+    outline-offset: 3px;
+}
+
+/*checked & indeterminate*/
+#checked-indeterminate input {
+    accent-color: teal;
+}
+
+#checked-indeterminate input:checked {
+    box-shadow: 0 0 5px 2px cyan;
+}
+
+#checked-indeterminate input:checked+label {
+    font-family: cursive;
+}
+
+#checked-indeterminate input[type="radio"]:checked+label {
+    color: orange;
+}
+
+#checked-indeterminate input:indeterminate+label {
+    color: teal;
+}
+
+/*valid & invalid*/
+#valid-invalid input:valid {
+    border: 2px solid palegreen;
+}
+
+#valid-invalid input:invalid {
+    border: 2px solid palevioletred;
+}
+
+/*in-range & out-of-range*/
+#in-out-range input:in-range {
+    border: 2px solid greenyellow;
+}
+
+#in-out-range input:out-of-range {
+    border: 2px solid tomato;
+}
+
+/*required & optional*/
+#required-optional input:required {
+    border: 2px solid orange;
+}
+
+#required-optional input:optional {
+    border: 2px solid purple;
+}
+
+#autofill input {
+    background-color: green;
+    font-size: 16px;
+    color: white;
+}
+
+#autofill input:-webkit-autofill,
+#autofill input:-moz-autofill {
+    border: 2px solid teal;
+}
+
+#autofill input:autofill {
+    border: 2px solid blue;
+}
+/*nth-child & nth-of-type*/
+#nthchild-oftype ol li:nth-child(3) {
+    background-color: paleturquoise;
+    border: 2px solid turquoise;
+}
+
+#nthchild-oftype span:nth-of-type(2), #nthchild-oftype span:nth-of-type(5){
+    background-color: palegreen;
+    border: 2px solid green;
+}
+/*nth-last-child & nth--last-of-type*/
+#nthlastchild-oftype ol li:nth-last-child(3) {
+    background-color: paleturquoise;
+    border: 2px solid turquoise;
+}
+
+#nthlastchild-oftype span:nth-last-of-type(2), #nthlastchild-oftype span:nth-last-of-type(5){
+    background-color: palegreen;
+    border: 2px solid green;
+}
+/*only-child e only-of-type*/
+#onlys div {
+    margin: 5px;
+    padding: 5px;
+    background-color: darkgray;
+    border: 1px solid darkblue;
+}
+
+#onlys p:only-child {
+    border: 2px solid lime;
+}
+
+#onlys span:only-of-type {
+    border: 2px solid purple;
+}
+
+#final #is {
+    background-color: palegreen;
+}
+
+#final #where {
+    border: 2px solid blue;
+}
+
+#final #has {
+    outline: 2px dashed tomato;
+    outline-offset: 3px;
+    box-shadow: 3px 3px 3px 3px pink;
+}
+
+#final div {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid black;
+}
+
+#final div:first-child *:nth-child(2n) {
+    border: 4px dotted gray;
+}
+
+#final div:first-child :is(p, code, .green) {
+    background-color: palegreen;
+}
+
+#final div:first-child :where(p, span) {
+    border: 2px solid blue;
+}
+
+#final div li:not(.hero) {
+    text-decoration: line-through red;
+}
+
+#final div li:not(:first-child, :last-child)::marker {
+    content: "☻";
+    color: teal;
+}
+
+#final div:last-child p:has(code) {
+    outline: 2px dashed tomato;
+    outline-offset: 3px;
+    box-shadow: 3px 3px 3px 3px pink;
+}

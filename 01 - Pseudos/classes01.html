@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <link rel="stylesheet" href="clas-style.css">
+</head>
+
+<body>
+    <h1>Pseudo-classes #01</h1>
+    <hr>
+    <h2>:hover</h2>
+    <div id="hover">
+        <div>
+            01
+            <p>"Hovering!"</p>
+        </div>
+        <div>
+            02
+            <p>"Hovering!"</p>
+        </div>
+        <div>
+            03
+            <p>"Hovering!"</p>
+        </div>
+    </div>
+    <hr>
+    <h2>:active</h2>
+    <div id="active">
+        <div>DIV</div>
+        <button>BUTTON</button>
+        <a href="#">LINK</a>
+    </div>
+    <hr>
+    <h2>:focus, :focus-within e :focus-visible</h2>
+    <div id="focus">
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="age">Idade:</label>
+            <input type="number" id="age" name="age" min="18" max="100"><br><br>
+
+            <label for="gender">Gênero:</label>
+            <select id="gender" name="gender">
+                <option value="">Selecione</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+                <option value="other">Outro</option>
+            </select><br><br>
+
+            <label for="country">País:</label>
+            <select id="country" name="country">
+                <option value="">Selecione</option>
+                <option value="brazil">Brasil</option>
+                <option value="usa">Estados Unidos</option>
+                <option value="france">França</option>
+                <option value="germany">Alemanha</option>
+            </select><br><br>
+
+            <button>Enviar</button>
+        </form>
+    </div>
+    <hr>
+    <h2>:target</h2>
+    <div id="target">
+        <ol>
+            <li><a href="#hover">Hover</a></li>
+            <li><a href="#active">Active</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#target">Target</a></li>
+            <li><a href="#">Reset</a></li>
+        </ol>
+    </div>
+    <hr>
+    <h2>:enabled e :disabled</h2>
+    <div id="enabled-disabled">
+        <button>Enabled</button>
+        <button disabled="disabled">Disabled</button>
+        <button class="change">Enabled</button>
+        <button class="change" disabled="disabled">Disabled</button>
+    </div>
+    <hr>
+    <h2>:link e :visited</h2>
+    <div id="link-visited">
+        <ul>
+            <li><a href="https://www.google.com/" target="_blank">Default</a></li>
+            <li><a class="change" href="https://www.google.com.br/" target="_blank">Link 01</a></li>
+            <li><a class="change" href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"
+                    target="_blank">Link 02</a></li>
+        </ul>
+    </div>
+    <hr>
+    <h2>:placeholder-shown</h2>
+    <div id="placeholder-shown">
+        <form>
+            <label for="name2">Nome:</label>
+            <input type="text" id="name2" name="name" required><br>
+            <label for="email2">E-mail:</label>
+            <input type="email" id="email2" name="email" placeholder="email, por favor!" required><br>
+            <label for="age2">Idade:</label>
+            <input type="number" id="age2" name="age" min="18" max="100"><br>
+            <button>Enviar</button>
+        </form>
+    </div>
+    <hr>
+    <h2>:checked e :indeterminate</h2>
+    <div id="checked-indeterminate">
+        <form>
+            <input type="checkbox" id="opcao1" name="opcao1" value="opcao1">
+            <label for="opcao1">Opção 1</label>
+            <br>
+            <input type="checkbox" id="opcao2" name="opcao2" value="opcao2">
+            <label for="opcao2">Opção 2</label>
+            <br>
+            <input type="checkbox" id="opcao3" name="opcao3" value="opcao3">
+            <label for="opcao3">Opção 3</label>
+        </form>
+        <form>
+            <input type="radio" id="opcao4" name="opcoes" value="opcao4">
+            <label for="opcao4">Opção 4</label>
+            <br>
+            <input type="radio" id="opcao5" name="opcoes" value="opcao5">
+            <label for="opcao5">Opção 5</label>
+            <br>
+            <input type="radio" id="opcao6" name="opcoes" value="opcao6">
+            <label for="opcao6">Opção 6</label>
+        </form>
+    </div>
+    <hr>
+    <h2>:valid e :invalid</h2>
+    <div id="valid-invalid">
+        <form>
+            <label>E-mail:<input type="email" name="" id=""></label>
+            <br>
+            <label>Número 1K+:<input type="number" min="1000"></label>
+            <br>
+            <label>Letras minúsculas:<input type="text" pattern="[a-z]+"></label>
+        </form>
+    </div>
+    <hr>
+    <h2>:in-range e :out-of-range</h2>
+    <div id="in-out-range">
+        <form>
+            <label>Quantidade (10~20):<input type="number" min="10" max="20" value="0"></label>
+            <br>
+        </form>
+    </div>
+    <hr>
+    <h2>:required e :optional</h2>
+    <div id="required-optional">
+        <form>
+            <label>Nome (obrigatório):<input type="text" required></label>
+            <label>Apelido (opcional):<input type="text"></label>        
+        </form>
+    </div>
+    <hr>
+    <h2>:-webkit-autofill</h2>
+    <div id="autofill">
+        <form>
+            <label for="email3">E-mail:</label>
+            <input type="email" id="email3" name="email" placeholder="email, por favor!" required>
+            Com autofill
+            <br>
+            <label>Texto sem autofill:<input type="text"></label>
+        </form>
+    </div>
+</body>
+
+</html>

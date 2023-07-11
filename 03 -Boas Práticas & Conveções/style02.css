@@ -1,0 +1,76 @@
+:root {
+    --bg-color: rgb(33, 33, 33);
+    --bg-gradient0: linear-gradient(180deg, lightblue, darkviolet);
+    --bg-gradient1: linear-gradient(45deg, #fc466B 0%, #3f5efb 100%);
+    --bg-gradient2: radial-gradient(limegreen, #171717);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+body:has(input#tema0:checked) h1 {
+    background: var(--bg-gradient0);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+body:has(input#tema0:checked) a {
+    background: var(--bg-gradient0);
+}
+
+body:has(input#tema1:checked) h1 {
+    background: var(--bg-gradient1);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+body:has(input#tema1:checked) a {
+    background: var(--bg-gradient1);
+}
+
+body:has(input#tema2:checked) h1 {
+    background: var(--bg-gradient2);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+body:has(input#tema2:checked) a {
+    background: var(--bg-gradient2);
+}
+
+h1 {
+    color: transparent;
+    font-size: 5rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: #fafafa;
+}
+
+.big-t0 {
+    --bg-div: var(--bg-gradient0);
+    --font-size: 2rem;
+}
+
+.small-t2 {
+    --bg-div: var(--bg-gradient2);
+    --font-size: 0.5rem;
+}
+
+#classes {
+    width: 250px;
+    height: 250px;
+}
+
+#classes div {
+    background: var(--bg-div);
+    font-size: var(--font-size, 1rem);
+    color: white;
+}

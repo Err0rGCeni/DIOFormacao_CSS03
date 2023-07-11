@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformações 3D</title>
+    <link rel="stylesheet" href="transformations.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="options">
+        <h1>transform:</h1>
+        <select name="transforms" id="transforms3D" onchange="handleOptions3D()">
+            <option value="perspective">perspective</option>
+            <option value="translateZ">translateZ</option>
+            <option value="scale">scale</option>
+        </select>
+        <p>Numbers:</p>
+        <p>-90 <input type="range" id="range1" min="-90" value="0" max="90" onchange="handleOptions3D()"> 90</p>
+        <p id="p-range1">0</p>
+        <p>-90 <input type="range" id="range2" min="-90" value="0" max="90" onchange="handleOptions3D()"> 90</p>
+        <p id="p-range2">0</p>
+
+    </div>
+    <div id="central">
+        <div id="target">↑</div>
+    </div>
+    
+</body>
+</html>

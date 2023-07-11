@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    max-width: 500px;
+    margin: auto;
+}
+
+h2 {
+    color: white;
+    background-color: palevioletred;
+}
+
+p {
+    background-color: palegreen;
+}
+
+#conteudo p {
+    background-color: palevioletred;
+}
+
+#conteudo p.texto {
+    background-color: paleturquoise;
+}
+
+.pzin {
+    background-color: black;
+    color: cyan;
+    border: 2px solid cyan;
+}
+
+div p {
+    background-color: blue;
+    color: white;
+    border: 1px solid red !important;
+}
+
+.papai {
+    font-size: 1.5rem;
+    color: brown;
+    outline: 5px solid green;
+    font-family: cursive;
+}
+
+.filho {
+    color: green;
+    outline: 3px solid lime;
+}
+
+.filho p {
+    color: inherit;
+    outline: inherit;
+}
+
+.filho .neto p {
+    color: inherit;
+}
